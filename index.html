@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore images from Wikimedia Commons.">
+  <title>Visual Explorer — Discover the World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Visual Explorer home">
+      <span class="brand-mark">V</span>
+      <span>visual<span class="brand-light">explorer</span></span>
+    </a>
+    <span class="top-note">A little inspiration, one search away</span>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR WINDOW TO THE WORLD</p>
+      <h1>Find something<br><span>worth looking at.</span></h1>
+      <p class="intro">Search a place, a feeling, or a curious little thing. Discover photographs and artwork from Wikimedia Commons.</p>
+
+      <form id="search-form" class="search-form">
+        <label class="sr-only" for="input">Search for images</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="input" type="search" placeholder="Try “northern lights” or “wild cats”…" autocomplete="off">
+        <button id="button" type="submit">Search <span aria-hidden="true">→</span></button>
+      </form>
+
+      <div class="quick-searches" aria-label="Suggested searches">
+        <span>Try:</span>
+        <button class="chip" type="button" data-query="mountains">Mountains</button>
+        <button class="chip" type="button" data-query="ocean">Ocean</button>
+        <button class="chip" type="button" data-query="architecture">Architecture</button>
+        <button class="chip" type="button" data-query="cats">Cats</button>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-live="polite">
+      <div class="gallery-heading">
+        <div>
+          <p class="section-kicker">THE COLLECTION</p>
+          <h2>Explore the gallery</h2>
+        </div>
+        <p id="result-count" class="result-count">Search to discover images</p>
+      </div>
+      <div id="results" class="results-grid">
+        <div class="empty-state">
+          <div class="empty-art" aria-hidden="true"><span>✳</span><span>◌</span><span>✦</span></div>
+          <h3>Your next discovery starts here.</h3>
+          <p>Enter a topic above and your image collection will appear here.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>VISUAL EXPLORER</span><span>Images provided by Wikimedia Commons</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
